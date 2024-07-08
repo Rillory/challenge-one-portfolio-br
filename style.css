@@ -3,30 +3,35 @@
 coloque nas sessões indicadas*/
 
 :root{
-    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+    /* Insira a variavel das outras cores inspecionando o modelo do figma */
+    /* Se esforce para trabalhar com variáveis, é uma dica profissional valiosa */
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
+   --cor-principal: #FADADD; /* Rosa pastel */
+   --cor-secundaria: #F9A1BC; /* Rosa pastel um pouco mais escuro */
+   --cor-terciaria: #E5A4CB; /* Rosa pastel ainda mais escuro */
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--cor-de-fundo);
     font-family: 'Raleway';
     margin: 0;
     padding: 0;
     line-height: 1;
 }
-ol, ul,li {
+
+ol, ul, li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: var(--cor-de-link);
 }
 
-/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
-de utiliza-la. 
+/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso se sintam a vontade 
+de utilizá-la. 
 
 Mas o que é o BEM?
 
@@ -38,93 +43,250 @@ de usuário complexa, e permite a reutilização de código existente sem copiar
 Link da documentação oficial!
 https://en.bem.info/methodology/quick-start/*/
 
-/*Sessão Menu*/
-
-section.menu{
-
+/* Sessão Menu */
+section.menu {
+    background-color: var(--cor-principal);
+    padding: 10px;
 }
 
-/*Sessão Title*/
-
-section.title{
-
+.menu__title {
+    color: var(--cor-secundaria);
+    text-align: center;
+    font-size: 1.5em;
 }
 
-/*Sessão About*/
-
-section.about{
-
+.menu__list {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
 }
 
-/*Sessão Hobbies*/
-
-section.hobbies{
-    
+.menu__list__item {
+    color: var(--cor-secundaria);
+    font-size: 1.2em;
 }
 
-/* Experiência Acadêmica*/
-
-section.academic{
-
+/* Sessão Title */
+section.title {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-de-link);
+    padding: 20px;
+    text-align: center;
 }
 
-/* experiência*/
-
-section.experience{
-
+.title__bio {
+    font-size: 1.8em;
 }
 
-/*Contato*/
-
-section.formcontato{
-
+.title__subsection {
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
-/*footeer*/
+.title__network {
+    margin-top: 20px;
+}
 
-section.footer{
-   
+.title__network__item {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Sessão About */
+section.about {
+    background-color: var(--cor-principal);
+    padding: 20px;
+}
+
+.about__title {
+    font-size: 1.5em;
+    color: var(--cor-terciaria);
+    text-align: center;
+}
+
+.about__paragraph {
+    margin-top: 10px;
+    color: var(--cor-de-link);
+}
+
+/* Sessão Hobbies */
+section.hobbies {
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+}
+
+.hobbies__title {
+    font-size: 1.5em;
+    color: var(--cor-terciaria);
+    text-align: center;
+}
+
+.hobbies__box {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--cor-principal);
+    text-align: center;
+}
+
+.hobbies__img {
+    margin-bottom: 10px;
+}
+
+/* Experiência Acadêmica */
+section.academic {
+    background-color: var(--cor-principal);
+    padding: 20px;
+}
+
+.academic__title {
+    font-size: 1.5em;
+    color: var(--cor-terciaria);
+    text-align: center;
+}
+
+.academic__courses__box {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--cor-secundaria);
+}
+
+/* Experiência */
+section.experience {
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+}
+
+.experience__title {
+    font-size: 1.5em;
+    color: var(--cor-terciaria);
+    text-align: center;
+}
+
+.experience__box {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--cor-principal);
+}
+
+/* Contato */
+section.formcontato {
+    background-color: var(--cor-principal);
+    padding: 20px;
+}
+
+.formcontato__title {
+    font-size: 1.5em;
+    color: var(--cor-terciaria);
+    text-align: center;
+}
+
+/* Footer */
+section.footer {
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    text-align: center;
 }
 
 /* Chegou a hora de se desafiar com a responsividade, 
 utilize como referência os breakpoints @media abaixo*/
 
-/*Tablet*/
+/* Tablet */
 @media (min-width: 768px) {
-
-/* Menu */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Experiências acadêmicas*/
-
-/*Expeirência profissional*/
-
+    /* Menu */
+    .menu__list {
+        justify-content: space-evenly;
+    }
+    /* title */
+    .title__bio {
+        font-size: 2em;
+    }
+    .title__subsection {
+        font-size: 1.4em;
+    }
+    /* Skills */
+    .skills__title {
+        font-size: 2em;
+    }
+    .skills__line {
+        display: flex;
+        justify-content: space-around;
+    }
+    /* Hobbies */
+    .hobbies__title {
+        font-size: 2em;
+    }
+    .hobbies__line {
+        display: flex;
+        justify-content: space-around;
+    }
+    /* Experiências acadêmicas */
+    .academic__title {
+        font-size: 2em;
+    }
+    .academic__courses {
+        display: flex;
+        justify-content: space-around;
+    }
+    /* Experiência profissional */
+    .experience__title {
+        font-size: 2em;
+    }
+    .experience__box {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
-/*Mobile*/
+/* Mobile */
 @media (min-width: 425px) {
-
-/*Menu*/
-
-/*Titulo*/
-
-/*Sessão sobre*/
-
-/*Skills*/
-
-/*Hobbies*/
- 
-/*Formação Acadêmica*/
-
-/*Experiência Profissional*/
-
- /*Contato*/
-
-/*Footer*/
-
+    /* Menu */
+    .menu__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu__list__item {
+        margin-bottom: 10px;
+    }
+    /* Titulo */
+    .title__bio {
+        font-size: 1.6em;
+    }
+    .title__subsection {
+        font-size: 1.2em;
+    }
+    /* Sessão sobre */
+    .about__title {
+        font-size: 1.4em;
+    }
+    .about__paragraph {
+        font-size: 1em;
+    }
+    /* Skills */
+    .skills__title {
+        font-size: 1.4em;
+    }
+    .skills__line {
+        display: block;
+    }
+    /* Hobbies */
+    .hobbies__title {
+        font-size: 1.4em;
+    }
+    .hobbies__line {
+        display: block;
+    }
+    /* Formação Acadêmica */
+    .academic__title {
+        font-size: 1.4em;
+    }
+    .academic__courses {
+        display: block;
+    }
+    /* Experiência Profissional */
+    .experience__title {
+        font-size: 1.4em;
+    }
+    .experience__box {
+        display: block;
+    }
 }
